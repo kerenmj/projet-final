@@ -1,0 +1,93 @@
+fieldset{
+  display: block;
+  height: 35%;
+  text-align: center;
+  margin: 0 auto; 
+  width: fit-content;
+  padding: 60px;
+  justify-content: center;
+  border: 2px solid #ccc;
+  border-radius: 35px;
+  background-color: rgb(252, 252, 2552);
+}
+h1{
+  text-align: center;
+}
+fieldset, label, input{
+  font-size: 25px;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  font-size: 16px;
+  align-items: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background-color: #fcfcfc;
+}
+form{
+  display: flex;
+  flex-direction: column;
+}
+button {
+  --primary-color: rgb(29, 114, 63);
+  --secondary-color: #fff;
+  --hover-color: #111;
+  --arrow-width: 10px;
+  --arrow-stroke: 2px;
+  box-sizing: border-box;
+  border: 0;
+  border-radius: 20px;
+  color: var(--secondary-color);
+  padding: 1em 1.8em;
+  background: var(--primary-color);
+  display: flex;
+  transition: 0.2s;
+  align-items: center;
+  gap: 0.6em;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+button .arrow-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button .arrow {
+  margin-top: 1px;
+  width: var(--arrow-width);
+  background: var(--primary-color);
+  height: var(--arrow-stroke);
+  position: relative;
+  transition: 0.2s;
+}
+
+button .arrow::before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  border: solid var(--secondary-color);
+  border-width: 0 var(--arrow-stroke) var(--arrow-stroke) 0;
+  display: inline-block;
+  top: -3px;
+  right: 3px;
+  transition: 0.2s;
+  padding: 3px;
+  transform: rotate(-45deg);
+}
+
+button:hover {
+  background-color: var(--hover-color);
+}
+
+button:hover .arrow {
+  background: var(--secondary-color);
+}
+
+button:hover .arrow:before {
+  right: 0;
+}
